@@ -35,7 +35,7 @@
       (append (list '(width  . 72) '(height . 40)
                     '(vertical-scroll-bars . nil)
                     '(internal-border-width . 24)
-                    '(font . "Roboto Mono Light 14"))))
+                    '(font . "Charter 14"))))
 (set-frame-parameter (selected-frame)
                      'internal-border-width 24)
 ;;; -------------------------------------------------------------------

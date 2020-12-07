@@ -32,12 +32,12 @@
 
 
 ;; Font and frame size
-(set-face-font 'default "Roboto Mono Light 14")
+(set-face-font 'default "Input Mono 14")
 (setq default-frame-alist
       (append (list '(width  . 72) '(height . 40)
                     '(vertical-scroll-bars . nil)
                     '(internal-border-width . 24)
-                    '(font . "Roboto Mono Light 14"))))
+                    '(font . "Input Mono 14"))))
 (set-frame-parameter (selected-frame)
                      'internal-border-width 24)
 
@@ -295,7 +295,7 @@ background color that is barely perceptible."
     (with-eval-after-load 'cus-edit (set-button-faces)))
 
 ;; Set theme
-(elegance-dark)
+;; (elegance-dark)
 
 ;; Structural
 (set-face 'bold                                          'face-strong)
