@@ -47,6 +47,9 @@
 
 (global-auto-revert-mode)
 
+;; Initial frame
+(setq default-frame-alist '((width . 87) (height . 60) (vertical-scroll-bars)))
+
 ;; Auto-save stuffs
 (setq auto-save-default nil)
 (auto-save-visited-mode +1)
@@ -76,3 +79,12 @@
   (set-modeline-faces))
 
 (set-nordic)
+
+(defun scratchpad ()
+  (interactive)
+  (let ((buff (generate-new-buffer "*Scratchpad*")))
+    (set-buffer buff)
+    (org-mode)
+    (insert "\n*Warning: this is a temporary scratch pad!*\n\nIf you want to save what you wrote after quitting, you need to [[elisp:write-file][save this as a new file]] (keystroke: =[C-x] [C-w]=)\n\n")
+    (switch-to-buffer buff)
+    (message "Switched to a temporary scratchpad")))
